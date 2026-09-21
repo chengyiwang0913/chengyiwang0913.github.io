@@ -2,78 +2,116 @@
 <html lang="en">
 
 <head>
-
-    <!-- =========================================================
-         BASIC SETTINGS
-         基础设置，一般不需要修改
-         ========================================================= -->
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-
-    <!-- =========================================================
-         PAGE TITLE
-         浏览器标签页显示的标题
-         
-         可以修改成：
-         Chengyi Wang
-         或
-         Chengyi Wang | TUC
-         ========================================================= -->
-
+    <!-- 【修改这里 1】浏览器标签页标题 -->
     <title>Chengyi Wang</title>
 
-
-    <!-- =========================================================
-         WEBSITE STYLE
-         
-         这是整个网页的样式。
-         如果你只想更新个人信息、论文、CV等，
-         一般不需要修改这里。
-         ========================================================= -->
-
     <style>
+        :root {
+            --blue: #1f5f99;
+            --blue-dark: #174a78;
+            --blue-light: #eef6fc;
+            --blue-border: #c9dff0;
+            --text: #1f2933;
+            --muted: #607080;
+            --white: #ffffff;
+        }
 
-        /* ---------- 整个网页 ---------- */
+        * {
+            box-sizing: border-box;
+        }
 
         body {
+            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 45px 30px;
-            color: #222;
+            color: var(--text);
+            background: #f7fbfe;
             line-height: 1.65;
-            font-size: 16px;
         }
 
+        .page {
+            max-width: 980px;
+            margin: 0 auto;
+            background: var(--white);
+            min-height: 100vh;
+            box-shadow: 0 0 22px rgba(31, 95, 153, 0.08);
+        }
 
-        /* ---------- 标题 ---------- */
+        /* =========================================================
+           TOP BAR
+           顶部蓝色区域
+           ========================================================= */
+        header {
+            background: var(--blue);
+            color: var(--white);
+            padding: 34px 42px 28px 42px;
+        }
 
-        h1 {
+        header h1 {
+            margin: 0 0 5px 0;
             font-size: 34px;
-            margin-top: 0;
-            margin-bottom: 5px;
             font-weight: 600;
         }
 
+        .subtitle {
+            margin: 0;
+            color: #e7f2fb;
+        }
+
+        nav {
+            margin-top: 22px;
+        }
+
+        nav a {
+            color: var(--white);
+            margin-right: 22px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================================================
+           MAIN CONTENT
+           ========================================================= */
+        main {
+            padding: 42px;
+        }
+
+        .profile {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 48px;
+        }
+
+        .profile-text {
+            flex: 1;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 4px solid var(--blue-light);
+        }
 
         h2 {
+            color: var(--blue-dark);
             font-size: 22px;
-            font-weight: 600;
-            margin-top: 45px;
-            margin-bottom: 20px;
-            padding-bottom: 6px;
-            border-bottom: 1px solid #dddddd;
+            margin-top: 42px;
+            margin-bottom: 18px;
+            padding-bottom: 7px;
+            border-bottom: 2px solid var(--blue-border);
         }
 
-
-        /* ---------- 链接 ---------- */
-
         a {
-            color: #1769aa;
+            color: var(--blue);
             text-decoration: none;
         }
 
@@ -81,114 +119,50 @@
             text-decoration: underline;
         }
 
-
-        /* ---------- 顶部导航栏 ---------- */
-
-        nav {
-            margin-top: 25px;
-            margin-bottom: 40px;
-        }
-
-        nav a {
-            margin-right: 22px;
-        }
-
-
-        /* ---------- 姓名下面的职位信息 ---------- */
-
-        .subtitle {
-            color: #666666;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-
-        /* =====================================================
-           PROFILE SECTION
-           首页个人信息 + 照片
-           ===================================================== */
-
-        .profile {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 50px;
-        }
-
-
-        .profile-text {
-            flex: 1;
-        }
-
-
-        /* ---------- 个人照片 ---------- */
-
-        .profile-photo {
-            width: 180px;
-            height: 220px;
-
-            /* 自动裁剪照片，避免变形 */
-            object-fit: cover;
-
+        .research-box {
+            background: var(--blue-light);
+            border-left: 4px solid var(--blue);
+            padding: 16px 18px;
             border-radius: 4px;
         }
 
-
-        /* =====================================================
-           PUBLICATIONS
-           论文样式
-           ===================================================== */
-
         .publication {
             margin-bottom: 24px;
+            padding: 14px 16px;
+            background: #fbfdff;
+            border: 1px solid var(--blue-border);
+            border-radius: 5px;
         }
-
 
         .publication-title {
             font-weight: 600;
+            color: var(--blue-dark);
         }
-
-
-        /* =====================================================
-           EDUCATION
-           教育经历样式
-           ===================================================== */
 
         .education-item {
             margin-bottom: 20px;
         }
 
-
-        /* =====================================================
-           FOOTER
-           页面底部
-           ===================================================== */
-
         footer {
-            margin-top: 65px;
-            padding-top: 20px;
-            border-top: 1px solid #dddddd;
-            color: #777777;
+            margin-top: 58px;
+            padding-top: 18px;
+            border-top: 1px solid var(--blue-border);
+            color: var(--muted);
             font-size: 14px;
         }
 
+        @media (max-width: 700px) {
+            header {
+                padding: 28px 22px 22px 22px;
+            }
 
-        /* =====================================================
-           MOBILE VERSION
-           
-           手机访问时：
-           照片会自动移动到文字下面
-           ===================================================== */
-
-        @media (max-width: 650px) {
-
-            body {
-                padding: 30px 20px;
+            main {
+                padding: 28px 22px;
             }
 
             .profile {
                 flex-direction: column;
-                gap: 25px;
+                gap: 24px;
             }
 
             .profile-photo {
@@ -200,550 +174,299 @@
                 display: inline-block;
                 margin-bottom: 8px;
             }
-
         }
-
     </style>
-
 </head>
-
-
 
 <body>
 
+<div class="page">
 
     <!-- =========================================================
-         1. HEADER
-         
-         修改：
-         - 姓名
-         - 当前身份
-         - 学校
+         1. 顶部基本信息
+         【修改这里 2：姓名、身份、学校】
          ========================================================= -->
+    <header>
 
-    <div class="profile">
+        <h1>Chengyi Wang</h1>
 
-        <div class="profile-text">
+        <p class="subtitle">
+            Ph.D. Student<br>
+            Technical University of Crete
+        </p>
 
-            <!-- 姓名 -->
+        <!-- 顶部导航栏，一般不需要改 -->
+        <nav>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-            <h1>Chengyi Wang</h1>
-
-
-            <!-- 当前身份 -->
-
-            <p class="subtitle">
-
-                Ph.D. Student<br>
-
-                <!-- 学校名称 -->
-                Technical University of Crete
-
-            </p>
-
-
-            <!-- =================================================
-                 NAVIGATION BAR
-                 
-                 顶部导航栏。
-                 点击后自动跳转到对应部分。
-                 一般不需要修改。
-                 ================================================= -->
-
-            <nav>
-
-                <a href="#about">About</a>
-
-                <a href="#research">Research</a>
-
-                <a href="#publications">Publications</a>
-
-                <a href="#education">Education</a>
-
-                <a href="#cv">CV</a>
-
-                <a href="#contact">Contact</a>
-
-            </nav>
+    </header>
 
 
-            <!-- =================================================
-                 ABOUT ME
-                 
-                 在这里填写你的个人简介。
-                 
-                 建议包括：
-                 
-                 1. 当前在哪里读 PhD
-                 2. 导师（如果你想写）
-                 3. 研究方向
-                 4. 硕士毕业学校（可选）
-                 
-                 建议控制在 3–6 句话。
-                 ================================================= -->
+    <main>
 
-            <h2 id="about">About</h2>
+        <!-- =====================================================
+             2. ABOUT + PHOTO
+             ===================================================== -->
 
-            <p>
+        <div class="profile">
 
-                I am a Ph.D. student at the
-                Technical University of Crete.
+            <div class="profile-text">
 
-                My research focuses on control of
-                distributed parameter systems,
-                with particular interests in PDE control
-                and backstepping.
+                <h2 id="about">About</h2>
 
-            </p>
+                <!--
+                    【修改这里 3：个人简介】
+
+                    下面是示例。
+                    以后直接修改这两段英文即可。
+                -->
+
+                <p>
+                    I am a Ph.D. student at the Technical University of Crete.
+                    My research interests lie in control of distributed parameter
+                    systems, particularly PDE backstepping, adaptive control,
+                    and learning-based control methods.
+                </p>
+
+                <p>
+                    Before joining the Technical University of Crete,
+                    I received my master's degree in Control Science and
+                    Engineering from Xiamen University.
+                </p>
+
+            </div>
+
+
+            <!--
+                【修改这里 4：照片】
+
+                把照片上传到 GitHub repository 根目录，
+                文件名改成：
+
+                profile.jpg
+
+                它需要和 index.html 放在同一层。
+            -->
+
+            <img
+                src="profile.jpg"
+                alt="Chengyi Wang"
+                class="profile-photo"
+            >
 
         </div>
-
 
 
         <!-- =====================================================
-             PROFILE PHOTO
-             
-             个人照片
-             
-             使用方法：
-             
-             1. 把照片上传到 GitHub repository
-             2. 照片命名为：
-                
-                profile.jpg
-                
-             3. 照片会自动显示在这里
-             
-             如果照片名称不是 profile.jpg，
-             修改下面 src="..." 即可。
+             3. RESEARCH INTERESTS
+             【修改这里 5】
              ===================================================== -->
 
-        <img
-            src="profile.jpg"
-            alt="Chengyi Wang"
-            class="profile-photo"
-        >
+        <h2 id="research">Research Interests</h2>
 
-    </div>
-
-
-
-    <!-- =========================================================
-         2. RESEARCH INTERESTS
-         
-         修改你的研究方向。
-         
-         可以增加或删除关键词。
-         建议保持 4–6 个左右。
-         ========================================================= -->
-
-    <h2 id="research">Research Interests</h2>
-
-    <p>
-
-        PDE Control ·
-        Backstepping ·
-        Adaptive Control ·
-        Flexible Structures ·
-        Neural Operators
-
-    </p>
+        <div class="research-box">
+            PDE Control ·
+            Backstepping ·
+            Adaptive Control ·
+            Flexible Structures ·
+            Neural Operators
+        </div>
 
 
+        <!-- =====================================================
+             4. PUBLICATIONS
+             【修改这里 6】
 
-    <!-- =========================================================
-         3. PUBLICATIONS
-         
-         论文列表。
-         
-         每一篇论文对应一个：
-         
-         <div class="publication">
-             ...
-         </div>
-         
-         新增论文时：
-         
-         直接复制一个 publication 区块即可。
-         ========================================================= -->
+             把示例换成你的真实论文。
+             每篇论文复制一个 publication 区块即可。
+             ===================================================== -->
 
-    <h2 id="publications">Publications</h2>
+        <h2 id="publications">Publications</h2>
 
 
+        <!-- ---------- Publication 1 ---------- -->
 
-    <!-- =====================================================
-         PUBLICATION 1
-         第一篇论文
-         ===================================================== -->
+        <div class="publication">
 
-    <div class="publication">
+            <!-- 【填论文标题】 -->
+            <div class="publication-title">
+                Your Paper Title
+            </div>
 
+            <!-- 【填作者】 -->
+            Chengyi Wang, Author 2, Author 3
 
-        <!-- 论文标题 -->
+            <br>
 
-        <div class="publication-title">
+            <!-- 【填期刊和年份】 -->
+            <em>Journal Name</em>, 2026.
 
-            Your Paper Title
+            <br>
+
+            <!-- 【把 # 换成论文链接】 -->
+            <a href="#" target="_blank">
+                Paper
+            </a>
 
         </div>
 
 
-        <!-- 作者 -->
+        <!-- ---------- Publication 2 ---------- -->
 
-        Chengyi Wang, Author 2, Author 3
+        <div class="publication">
 
-        <br>
+            <div class="publication-title">
+                Your Second Paper Title
+            </div>
 
+            Chengyi Wang, Author 2
 
-        <!-- 期刊 + 年份 -->
+            <br>
 
-        <em>Journal Name</em>, 2026.
+            <em>Journal Name</em>, 2025.
 
-        <br>
+            <br>
 
-
-        <!-- =================================================
-             论文链接
-             
-             把 # 替换成：
-             
-             DOI
-             arXiv
-             Journal webpage
-             
-             例如：
-             
-             href="https://doi.org/10.xxxx/xxxxx"
-             ================================================= -->
-
-        <a href="#" target="_blank">
-            Paper
-        </a>
-
-    </div>
-
-
-
-    <!-- =====================================================
-         PUBLICATION 2
-         第二篇论文
-         ===================================================== -->
-
-    <div class="publication">
-
-        <div class="publication-title">
-
-            Your Second Paper Title
+            <a href="#" target="_blank">
+                Paper
+            </a>
 
         </div>
 
-        Chengyi Wang, Author 2
-
-        <br>
-
-        <em>Journal Name</em>, 2025.
-
-        <br>
-
-        <a href="#" target="_blank">
-            Paper
-        </a>
-
-    </div>
-
-
-
-    <!-- =====================================================
-         如何添加新论文？
-         
-         复制下面这个模板：
-         
-         
-         <div class="publication">
-         
-             <div class="publication-title">
-                 Paper Title
-             </div>
-         
-             Chengyi Wang, Other Authors
-         
-             <br>
-         
-             <em>Journal Name</em>, 2026.
-         
-             <br>
-         
-             <a href="论文网址" target="_blank">
-                 Paper
-             </a>
-         
-         </div>
-         
-         
-         然后放到这里即可。
-         ===================================================== -->
-
-
-
-    <!-- =========================================================
-         4. EDUCATION
-         
-         教育经历。
-         
-         推荐顺序：
-         
-         PhD
-         ↓
-         Master's
-         ↓
-         Bachelor's
-         ========================================================= -->
-
-    <h2 id="education">Education</h2>
-
-
-
-    <!-- ---------- PhD ---------- -->
-
-    <div class="education-item">
-
-        <strong>
-            Technical University of Crete
-        </strong>
-
-        <br>
-
-        <!-- 修改 PhD 专业名称（如果需要） -->
-
-        Ph.D., 2026–Present
-
-    </div>
-
-
-
-    <!-- ---------- Master's ---------- -->
-
-    <div class="education-item">
-
-        <strong>
-            Xiamen University
-        </strong>
-
-        <br>
-
-        M.Eng. in Control Science and Engineering
-
-    </div>
-
-
-
-    <!-- ---------- Bachelor's ---------- -->
-
-    <div class="education-item">
-
-        <strong>
-            East China Jiaotong University
-        </strong>
-
-        <br>
 
         <!--
-             在这里填写本科专业
-             
-             例如：
-             
-             B.Eng. in Automation
+            添加新论文时，复制：
+
+            <div class="publication">
+
+                <div class="publication-title">
+                    Your New Paper Title
+                </div>
+
+                Chengyi Wang, Other Authors
+
+                <br>
+
+                <em>Journal Name</em>, 2026.
+
+                <br>
+
+                <a href="论文网址" target="_blank">
+                    Paper
+                </a>
+
+            </div>
         -->
 
-        B.Eng.
 
-    </div>
+        <!-- =====================================================
+             5. EDUCATION
+             【修改这里 7】
+             ===================================================== -->
 
-
-
-    <!-- =========================================================
-         5. CURRICULUM VITAE
-         
-         CV 下载。
-         
-         使用方法：
-         
-         1. 把你的 CV 上传到 GitHub repository
-         
-         2. 建议命名：
-         
-            CV.pdf
-         
-         3. 不需要修改下面的代码
-         
-         点击网页上的 "Curriculum Vitae (PDF)"
-         就可以打开你的 CV。
-         ========================================================= -->
-
-    <h2 id="cv">Curriculum Vitae</h2>
-
-    <p>
-
-        <a href="CV.pdf"
-           target="_blank">
-
-            Curriculum Vitae (PDF)
-
-        </a>
-
-    </p>
+        <h2 id="education">Education</h2>
 
 
-
-    <!-- =========================================================
-         6. CONTACT
-         
-         联系方式。
-         
-         修改：
-         
-         Email
-         Google Scholar
-         ORCID（如果有）
-         GitHub
-         ========================================================= -->
-
-    <h2 id="contact">Contact</h2>
+        <div class="education-item">
+            <strong>Technical University of Crete</strong>
+            <br>
+            Ph.D. Student, 2026–Present
+        </div>
 
 
-
-    <!-- ---------- Email ---------- -->
-
-    <p>
-
-        Email:
-
-        <!--
-             把 YOUR_EMAIL@tuc.gr
-             两处都替换成你的真实邮箱
-        -->
-
-        <a href="mailto:YOUR_EMAIL@tuc.gr">
-
-            YOUR_EMAIL@tuc.gr
-
-        </a>
-
-    </p>
+        <div class="education-item">
+            <strong>Xiamen University</strong>
+            <br>
+            M.Eng. in Control Science and Engineering
+        </div>
 
 
+        <div class="education-item">
+            <strong>East China Jiaotong University</strong>
+            <br>
 
-    <!-- ---------- Academic Profiles ---------- -->
-
-    <p>
-
-
-        <!-- =============================================
-             GOOGLE SCHOLAR
-             
-             把 # 换成你的 Google Scholar 地址
-             ============================================= -->
-
-        <a href="#"
-           target="_blank">
-
-            Google Scholar
-
-        </a>
+            <!-- 【这里填写本科专业】 -->
+            B.Eng. in XXXXX
+        </div>
 
 
-        &nbsp;·&nbsp;
+        <!-- =====================================================
+             6. CONTACT
+             【修改这里 8】
+             ===================================================== -->
+
+        <h2 id="contact">Contact</h2>
 
 
-        <!-- =============================================
-             GITHUB
-             
-             已经填入你的 GitHub 地址
-             一般不用修改
-             ============================================= -->
+        <p>
+            Email:
 
-        <a href="https://github.com/chengyiwang0913"
-           target="_blank">
+            <!--
+                把下面两处 YOUR_EMAIL@tuc.gr
+                都换成你的真实邮箱
+            -->
 
-            GitHub
-
-        </a>
-
-
-        <!-- =============================================
-             ORCID
-             
-             如果你有 ORCID，可以取消下面的注释，
-             然后把网址改成自己的。
-             
-             删除前面的 <!-- 和后面的 -->
-             
-             
-        ·
-        
-        <a href="https://orcid.org/YOUR-ORCID"
-           target="_blank">
-           
-            ORCID
-            
-        </a>
-        
-        
-             ============================================= -->
-
-    </p>
+            <a href="mailto:YOUR_EMAIL@tuc.gr">
+                YOUR_EMAIL@tuc.gr
+            </a>
+        </p>
 
 
+        <p>
 
-    <!-- =========================================================
-         7. OPTIONAL: NEWS
-         
-         这是可选部分。
-         
-         如果以后想加入 News，
-         可以把下面整段取消注释。
-         
-         例如：
-         
-         Sep. 2026 — Joined TUC as a Ph.D. student.
-         Aug. 2026 — Paper accepted by ...
-         
-         ========================================================= -->
+            <!--
+                【Google Scholar】
+                把 # 换成你的 Scholar 主页
+            -->
 
+            <a href="#" target="_blank">
+                Google Scholar
+            </a>
 
-    <!--
+            &nbsp;·&nbsp;
 
-    <h2 id="news">News</h2>
-
-    <p>
-        <strong>Sep. 2026</strong>
-        — Joined the Technical University of Crete
-        as a Ph.D. student.
-    </p>
-
-    -->
+            <!-- GitHub 已经填好 -->
+            <a href="https://github.com/chengyiwang0913"
+               target="_blank">
+                GitHub
+            </a>
 
 
+            <!--
+                ORCID（可选）
 
-    <!-- =========================================================
-         8. FOOTER
-         
-         页面最下面的信息。
-         
-         每年可以修改年份。
-         ========================================================= -->
+                如果以后有 ORCID，可以加：
 
-    <footer>
+                &nbsp;·&nbsp;
 
-        © 2026 Chengyi Wang
+                <a href="https://orcid.org/你的ORCID"
+                   target="_blank">
+                    ORCID
+                </a>
+            -->
 
-        <br>
+        </p>
 
-        Last updated: September 2026
 
-    </footer>
+        <!-- =====================================================
+             7. FOOTER
+             【修改这里 9：更新时间】
+             ===================================================== -->
 
+        <footer>
+            © 2026 Chengyi Wang
+            <br>
+            Last updated: September 2026
+        </footer>
+
+    </main>
+
+</div>
 
 </body>
-
 </html>
