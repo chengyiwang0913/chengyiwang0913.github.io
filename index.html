@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- 【修改这里 1】浏览器标签页标题 -->
+    <!-- 浏览器标签页标题 -->
     <title>Chengyi Wang</title>
 
     <style>
@@ -39,10 +39,6 @@
             box-shadow: 0 0 22px rgba(31, 95, 153, 0.08);
         }
 
-        /* =========================================================
-           TOP BAR
-           顶部蓝色区域
-           ========================================================= */
         header {
             background: var(--blue);
             color: var(--white);
@@ -75,9 +71,6 @@
             text-decoration: underline;
         }
 
-        /* =========================================================
-           MAIN CONTENT
-           ========================================================= */
         main {
             padding: 42px;
         }
@@ -182,12 +175,8 @@
 
 <div class="page">
 
-    <!-- =========================================================
-         1. 顶部基本信息
-         【修改这里 2：姓名、身份、学校】
-         ========================================================= -->
+    <!-- 顶部基本信息 -->
     <header>
-
         <h1>Chengyi Wang</h1>
 
         <p class="subtitle">
@@ -195,7 +184,6 @@
             Technical University of Crete
         </p>
 
-        <!-- 顶部导航栏，一般不需要改 -->
         <nav>
             <a href="#about">About</a>
             <a href="#research">Research</a>
@@ -203,50 +191,36 @@
             <a href="#education">Education</a>
             <a href="#contact">Contact</a>
         </nav>
-
     </header>
-
 
     <main>
 
-        <!-- =====================================================
-             2. ABOUT + PHOTO
-             ===================================================== -->
-
+        <!-- ABOUT + PHOTO -->
         <div class="profile">
 
             <div class="profile-text">
 
                 <h2 id="about">About</h2>
 
-                <!--
-                    【修改这里 3：个人简介】
-
-                    下面是示例。
-                    以后直接修改这两段英文即可。
-                -->
-
+                <!-- 个人简介：可直接修改下面这一段 -->
                 <p>
                     I am a Ph.D. student at the Technical University of Crete.
-                    My research interests lie in control of distributed parameter
-                    systems, particularly PDE backstepping, adaptive control,
-                    and learning-based control methods.
+                    My research focuses on the control of distributed-parameter systems,
+                    with particular interests in PDE backstepping, adaptive control,
+                    and learning-based methods for PDE systems.
+                </p>
+
+                <p>
+                    Before joining the Technical University of Crete, I received my
+                    M.Eng. in Control Science and Engineering from Xiamen University.
                 </p>
 
             </div>
 
-
             <!--
-                【修改这里 4：照片】
-
-                把照片上传到 GitHub repository 根目录，
-                文件名改成：
-
-                profile.jpg
-
-                它需要和 index.html 放在同一层。
+                个人照片：
+                将照片命名为 profile.jpg，并与 index.html 放在同一目录。
             -->
-
             <img
                 src="profile.jpg"
                 alt="Chengyi Wang"
@@ -255,116 +229,71 @@
 
         </div>
 
-
-        <!-- =====================================================
-             3. RESEARCH INTERESTS
-             【修改这里 5】
-             ===================================================== -->
-
+        <!-- RESEARCH INTERESTS -->
         <h2 id="research">Research Interests</h2>
 
         <div class="research-box">
             PDE Control ·
-            Backstepping ·
+            Backstepping Control ·
             Adaptive Control ·
             Flexible Structures ·
             Neural Operators
         </div>
 
-
-        <!-- =====================================================
-             4. PUBLICATIONS
-             【修改这里 6】
-
-             把示例换成你的真实论文。
-             每篇论文复制一个 publication 区块即可。
-             ===================================================== -->
-
+        <!-- PUBLICATIONS -->
         <h2 id="publications">Publications</h2>
 
-
-        <!-- ---------- Publication 1 ---------- -->
-
         <div class="publication">
-
-            <!-- 【填论文标题】 -->
             <div class="publication-title">
                 Output-Feedback Boundary Control of Thermally and Flow-Induced Vibrations in Slender Timoshenko Beams
             </div>
 
-            <!-- 【填作者】 -->
-            C. Wang, and J. Wang
-
+            C. Wang and J. Wang
+            <br>
+            <em>arXiv preprint</em>, 2025.
             <br>
 
-            <!-- 【填期刊和年份】 -->
-            <em>arXiv</em>, 2025.
-
-            <br>
-
-            <!-- 【把 # 换成论文链接】 -->
             <a href="https://arxiv.org/abs/2503.21281" target="_blank">
-                Paper
+                arXiv
             </a>
-
         </div>
 
-
-        <!-- ---------- Publication 2 ---------- -->
-
         <div class="publication">
-
             <div class="publication-title">
                 Rapid Vibration Suppression and Trajectory Tracking of a Serial Manipulator with Multi-Flexible Links
             </div>
 
             C. Wang, Y. Huang, and J. Wang
-
             <br>
-
-            <em>arXiv</em>, 2026.
-
+            <em>arXiv preprint</em>, 2026.
             <br>
 
             <a href="https://arxiv.org/abs/2605.17477" target="_blank">
-                Paper
+                arXiv
             </a>
-
         </div>
 
-
         <!--
-            添加新论文时，复制：
+            添加新论文时复制：
 
             <div class="publication">
-
                 <div class="publication-title">
                     Your New Paper Title
                 </div>
 
-                Chengyi Wang, Other Authors
-
+                C. Wang, Other Authors
+                <br>
+                <em>Journal Name</em>, Year.
                 <br>
 
-                <em>Journal Name</em>, 2026.
-
-                <br>
-
-                <a href="论文网址" target="_blank">
+                <a href="论文链接" target="_blank">
                     Paper
                 </a>
-
             </div>
         -->
 
-
-        <!-- =====================================================
-             5. EDUCATION
-             【修改这里 7】
-             ===================================================== -->
-
+        <!-- EDUCATION -->
         <h2 id="education">Education</h2>
-
 
         <div class="education-item">
             <strong>Technical University of Crete</strong>
@@ -372,87 +301,52 @@
             Ph.D. Student, 2026–Present
         </div>
 
-
         <div class="education-item">
             <strong>Xiamen University</strong>
             <br>
-            M.Eng. in Control Science and Engineering, 2023-2026
+            M.Eng. in Control Science and Engineering, 2023–2026
         </div>
-
 
         <div class="education-item">
             <strong>East China Jiaotong University</strong>
             <br>
-
-            <!-- 【这里填写本科专业】 -->
-            B.Eng. in Industrial Automation, 2019-2023
+            B.Eng. in Industrial Automation, 2019–2023
         </div>
 
-
-        <!-- =====================================================
-             6. CONTACT
-             【修改这里 8】
-             ===================================================== -->
-
+        <!-- CONTACT -->
         <h2 id="contact">Contact</h2>
-
 
         <p>
             Email:
-
-            <!--
-                把下面两处 YOUR_EMAIL@tuc.gr
-                都换成你的真实邮箱
-            -->
-
-            <a href="mailto:YOUR_EMAIL@tuc.gr">
-                cwang@tuc.gr
-                chengyiwang0913@gmail.com
-            </a>
+            <a href="mailto:cwang@tuc.gr">cwang@tuc.gr</a>
+            <br>
+            Personal:
+            <a href="mailto:chengyiwang0913@gmail.com">chengyiwang0913@gmail.com</a>
         </p>
 
-
         <p>
-
-            <!--
-                【Google Scholar】
-                把 # 换成你的 Scholar 主页
-            -->
-
-            <a href="#" target="_blank">
-                Google Scholar
+            <a href="https://github.com/chengyiwang0913" target="_blank">
+                GitHub
             </a>
 
             &nbsp;·&nbsp;
 
-            <!-- GitHub 已经填好 -->
-            <a href="https://github.com/chengyiwang0913"
-               target="_blank">
-                GitHub
+            <a href="https://orcid.org/0009-0008-9517-4711" target="_blank">
+                ORCID
             </a>
 
-
             <!--
-                ORCID（可选）
-
-                如果以后有 ORCID，可以加：
+                如果以后有 Google Scholar 主页，可在这里加入：
 
                 &nbsp;·&nbsp;
 
-                <a href="https://orcid.org/0009-0008-9517-4711"
-                   target="_blank">
-                    ORCID
+                <a href="你的 Google Scholar 网址" target="_blank">
+                    Google Scholar
                 </a>
             -->
-
         </p>
 
-
-        <!-- =====================================================
-             7. FOOTER
-             【修改这里 9：更新时间】
-             ===================================================== -->
-
+        <!-- FOOTER -->
         <footer>
             © 2026 Chengyi Wang
             <br>
