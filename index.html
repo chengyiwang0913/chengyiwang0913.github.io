@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- 浏览器标签页标题 -->
     <title>Chengyi Wang</title>
 
     <style>
@@ -42,11 +40,11 @@
         header {
             background: var(--blue);
             color: var(--white);
-            padding: 34px 42px 28px 42px;
+            padding: 34px 42px 28px;
         }
 
         header h1 {
-            margin: 0 0 5px 0;
+            margin: 0 0 5px;
             font-size: 34px;
             font-weight: 600;
         }
@@ -146,7 +144,7 @@
 
         @media (max-width: 700px) {
             header {
-                padding: 28px 22px 22px 22px;
+                padding: 28px 22px 22px;
             }
 
             main {
@@ -172,192 +170,175 @@
 </head>
 
 <body>
+    <div class="page">
 
-<div class="page">
+        <header>
+            <h1>Chengyi Wang</h1>
 
-    <!-- 顶部基本信息 -->
-    <header>
-        <h1>Chengyi Wang</h1>
+            <p class="subtitle">
+                Ph.D. Student<br>
+                Technical University of Crete
+            </p>
 
-        <p class="subtitle">
-            Ph.D. Student<br>
-            Technical University of Crete
-        </p>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
 
-        <nav>
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#publications">Publications</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+        <main>
 
-    <main>
+            <!-- ABOUT + PHOTO -->
+            <div class="profile">
+                <div class="profile-text">
+                    <h2 id="about">About</h2>
 
-        <!-- ABOUT + PHOTO -->
-        <div class="profile">
+                    <p>
+                        I am a Ph.D. student at the Technical University of Crete,
+                        under the supervision of Prof. Nikolaos Bekiaris-Liberis.
+                        My research focuses on the control of distributed-parameter systems,
+                        with particular interests in PDE backstepping, adaptive control,
+                        and learning-based methods for PDE systems.
+                    </p>
 
-            <div class="profile-text">
+                    <p>
+                        Before joining the Technical University of Crete, I received my
+                        M.Eng. in Control Science and Engineering from Xiamen University,
+                        where I was supervised by
+                        <a href="https://jiwebpage.github.io/jiwang/"
+                           target="_blank"
+                           rel="noopener noreferrer">Prof. Ji Wang</a>.
+                    </p>
+                </div>
 
-                <h2 id="about">About</h2>
-
-                <!-- 个人简介：可直接修改下面两段 -->
-                <p>
-                    I am a Ph.D. student at the Technical University of Crete,
-                    under the supervision of Prof. Nikolaos Bekiaris-Liberis.
-                    My research focuses on the control of distributed-parameter systems,
-                    with particular interests in PDE backstepping, adaptive control,
-                    and learning-based methods for PDE systems.
-                </p>
-
-                <p>
-                    Before joining the Technical University of Crete, I received my
-                    M.Eng. in Control Science and Engineering from Xiamen University,
-                    where I was supervised by Prof. Ji Wang.
-                </p>
-
+                <!-- 将 profile.jpg 与 index.html 放在同一目录 -->
+                <img
+                    src="profile.jpg"
+                    alt="Chengyi Wang"
+                    class="profile-photo"
+                >
             </div>
 
-            <!--
-                个人照片：
-                将照片命名为 profile.jpg，并与 index.html 放在同一目录。
-            -->
-            <img
-                src="profile.jpg"
-                alt="Chengyi Wang"
-                class="profile-photo"
-            >
+            <!-- RESEARCH INTERESTS -->
+            <h2 id="research">Research Interests</h2>
 
-        </div>
-
-        <!-- RESEARCH INTERESTS -->
-        <h2 id="research">Research Interests</h2>
-
-        <div class="research-box">
-            PDE Control ·
-            Backstepping ·
-            Adaptive Control ·
-            Flexible Structures ·
-            Neural Operators
-        </div>
-
-        <!-- PUBLICATIONS -->
-        <h2 id="publications">Publications</h2>
-
-        <div class="publication">
-            <div class="publication-title">
-                Output-Feedback Boundary Control of Thermally and Flow-Induced Vibrations in Slender Timoshenko Beams
+            <div class="research-box">
+                PDE Control ·
+                Backstepping ·
+                Adaptive Control ·
+                Flexible Structures ·
+                Neural Operators
             </div>
 
-            C. Wang and J. Wang
-            <br>
-            <em>arXiv preprint</em>, 2025.
-            <br>
-
-            <a href="https://arxiv.org/abs/2503.21281" target="_blank">
-                arXiv
-            </a>
-        </div>
-
-        <div class="publication">
-            <div class="publication-title">
-                Rapid Vibration Suppression and Trajectory Tracking of a Serial Manipulator with Multi-Flexible Links
-            </div>
-
-            C. Wang, Y. Huang, and J. Wang
-            <br>
-            <em>arXiv preprint</em>, 2026.
-            <br>
-
-            <a href="https://arxiv.org/abs/2605.17477" target="_blank">
-                arXiv
-            </a>
-        </div>
-
-        <!--
-            添加新论文时复制：
+            <!-- PUBLICATIONS -->
+            <h2 id="publications">Publications</h2>
 
             <div class="publication">
                 <div class="publication-title">
-                    Your New Paper Title
+                    Output-Feedback Boundary Control of Thermally and Flow-Induced
+                    Vibrations in Slender Timoshenko Beams
                 </div>
 
-                C. Wang, Other Authors
+                C. Wang and J. Wang
                 <br>
-                <em>Journal Name</em>, Year.
+                <em>arXiv preprint</em>, 2025.
                 <br>
 
-                <a href="论文链接" target="_blank">
-                    Paper
+                <a href="https://arxiv.org/abs/2503.21281"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    arXiv
                 </a>
             </div>
-        -->
 
-        <!-- EDUCATION -->
-        <h2 id="education">Education</h2>
+            <div class="publication">
+                <div class="publication-title">
+                    Rapid Vibration Suppression and Trajectory Tracking of a
+                    Serial Manipulator with Multi-Flexible Links
+                </div>
 
-        <div class="education-item">
-            <strong>Technical University of Crete, Greece</strong>
-            <br>
-            Ph.D. Student, 2026–Present
-        </div>
+                C. Wang, Y. Huang, and J. Wang
+                <br>
+                <em>Mechanical Systems and Signal Processing</em>,
+                available online, 2026.
+                <br>
 
-        <div class="education-item">
-            <strong>Xiamen University, China</strong>
-            <br>
-            M.Eng. in Control Science and Engineering, 2023–2026
-        </div>
-
-        <div class="education-item">
-            <strong>East China Jiaotong University, China</strong>
-            <br>
-            B.Eng. in Industrial Automation, 2019–2023
-        </div>
-
-        <!-- CONTACT -->
-        <h2 id="contact">Contact</h2>
-
-        <p>
-            Institutional email:
-            <a href="mailto:cwang@tuc.gr">cwang@tuc.gr</a>
-            <br>
-            Personal email:
-            <a href="mailto:chengyiwang0913@gmail.com">chengyiwang0913@gmail.com</a>
-        </p>
-
-        <p>
-            <a href="https://github.com/chengyiwang0913" target="_blank">
-                GitHub
-            </a>
-
-            &nbsp;·&nbsp;
-
-            <a href="https://orcid.org/0009-0008-9517-4711" target="_blank">
-                ORCID
-            </a>
-
-            <!--
-                如果以后有 Google Scholar 主页，可在这里加入：
+                <a href="https://www.sciencedirect.com/science/article/pii/S0888327026013439"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Journal article
+                </a>
 
                 &nbsp;·&nbsp;
 
-                <a href="你的 Google Scholar 网址" target="_blank">
-                    Google Scholar
+                <a href="https://arxiv.org/abs/2605.17477"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    arXiv
                 </a>
-            -->
-        </p>
+            </div>
 
-        <!-- FOOTER -->
-        <footer>
-            © 2026 Chengyi Wang
-            <br>
-            Last updated: September 2026
-        </footer>
+            <!-- EDUCATION -->
+            <h2 id="education">Education</h2>
 
-    </main>
+            <div class="education-item">
+                <strong>Technical University of Crete, Greece</strong>
+                <br>
+                Ph.D. Student, 2026–Present
+            </div>
 
-</div>
+            <div class="education-item">
+                <strong>Xiamen University, China</strong>
+                <br>
+                M.Eng. in Control Science and Engineering, 2023–2026
+            </div>
 
+            <div class="education-item">
+                <strong>East China Jiaotong University, China</strong>
+                <br>
+                B.Eng. in Industrial Automation, 2019–2023
+            </div>
+
+            <!-- CONTACT -->
+            <h2 id="contact">Contact</h2>
+
+            <p>
+                Institutional email:
+                <a href="mailto:cwang@tuc.gr">cwang@tuc.gr</a>
+                <br>
+                Personal email:
+                <a href="mailto:chengyiwang0913@gmail.com">
+                    chengyiwang0913@gmail.com
+                </a>
+            </p>
+
+            <p>
+                <a href="https://github.com/chengyiwang0913"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+                &nbsp;·&nbsp;
+
+                <a href="https://orcid.org/0009-0008-9517-4711"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    ORCID
+                </a>
+            </p>
+
+            <footer>
+                © 2026 Chengyi Wang
+                <br>
+                Last updated: November 2026
+            </footer>
+
+        </main>
+    </div>
 </body>
+
 </html>
